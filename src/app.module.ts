@@ -9,7 +9,7 @@ import { RoomsModule } from './rooms/rooms.module';
     RoomsModule,
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'db',
+      database: './db/roomdb.db',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),

@@ -15,6 +15,10 @@ export class RoomsService {
     return await this.roomRepository.find();
   }
 
+  async findById(id: number): Promise<Room> {
+    return this.roomRepository.findOne(id);
+  }
+
   async create(room: Room): Promise<Room> {
     return await this.roomRepository.save(room);
   }
